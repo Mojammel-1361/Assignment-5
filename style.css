@@ -7,3 +7,22 @@
     background-size: cover;
     padding-top: 4rem;
 }
+.select-part{
+    font-size: 3rem;
+    
+}
+
+.player-list {
+    height: 350px;
+}
+.budget-list{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.input-filed{
+    width: 100px;
+}
