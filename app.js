@@ -29,18 +29,13 @@ function playerName(element){
     
     const numberString = document.getElementById('total-plyer').innerText;
     const number = parseInt(numberString);
-    if(number >= 6 ){
-        alert('5 palyer is select beter luck next time');
-        
+    if (number > 5) {
+        alert('top 5 player select');
+        return number;
     }
-    
-    
-    
-
     element.disabled = true;
 }
 // player list create and display part  end
-
     
 // player calculated part start 
 document.getElementById('calculated').addEventListener('click', function(){
