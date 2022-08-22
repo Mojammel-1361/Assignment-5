@@ -14,6 +14,11 @@
 
 .player-list {
     height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    padding: 30px;
 }
 .budget-list{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

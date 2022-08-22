@@ -1,20 +1,20 @@
+// player list create and display part  start
 const nameArry = [];
-
 function displayList (list){
     const tableBody = document.getElementById('name-list');
     tableBody.innerHTML = '';
     for (i= 0; i<list.length; i++){
-        // console.log(nameArry[i].playerName);
         const name = nameArry[i].playerName;
-
         const tr = document.createElement('tr');
         tr.innerHTML = `
         <th>${i + 1}</th>
         <td>${name}</td>
         `;
         tableBody.appendChild(tr);
+        
     }
 }
+
 
 function playerName(element){
     
@@ -25,14 +25,25 @@ function playerName(element){
     }
     nameArry.push(playerObject);
     document.getElementById('total-plyer').innerHTML = nameArry.length;
-
     displayList(nameArry);
     
+    const numberString = document.getElementById('total-plyer').innerText;
+    const number = parseInt(numberString);
+    if(number > 3){
+        alert('5 palyer is select beter luck next time');
+        
+    }
+    else{
+        
+    }
+    
+    
+
     element.disabled = true;
 }
+// player list create and display part  end
 
-
-
+    
 // player calculated part start 
 document.getElementById('calculated').addEventListener('click', function(){
     const playerCostInput = document.getElementById('player-cost');
