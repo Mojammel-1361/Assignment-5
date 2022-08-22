@@ -1,12 +1,38 @@
 const nameArry = [];
 
+function displayList (list){
+    const tableBody = document.getElementById('name-list');
+    tableBody.innerHTML = '';
+    for (i= 0; i<list.length; i++){
+        // console.log(nameArry[i].playerName);
+        const name = nameArry[i].playerName;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+        <th>${i + 1}</th>
+        <td>${name}</td>
+        `;
+        tableBody.appendChild(tr);
+    }
+}
+
 function playerName(element){
     
     const playerName =element.parentNode.parentNode.children[0].innerText;
-    nameArry.push(playerName);
+
+    const playerObject ={
+        playerName: playerName
+    }
+    nameArry.push(playerObject);
     document.getElementById('total-plyer').innerHTML = nameArry.length;
-    console.log(playerName);
+
+    displayList(nameArry);
+    
+    element.disabled = true;
 }
+
+
+
 // player calculated part start 
 document.getElementById('calculated').addEventListener('click', function(){
     const playerCostInput = document.getElementById('player-cost');
@@ -22,6 +48,7 @@ document.getElementById('calculated').addEventListener('click', function(){
 })
 // player calculated part end
 
+// Budget part start 
 document.getElementById('total-calculated').addEventListener('click', function(){
     const managerCostInput = document.getElementById('manager-cost').value;
     const managerCost = parseInt(managerCostInput);
@@ -32,8 +59,7 @@ document.getElementById('total-calculated').addEventListener('click', function()
     const playerExpenses = parseInt(playerExpensesInput);
 
     const totalExpenses = document.getElementById('total-expenses');
-    totalExpenses.innerText = playerExpenses + managerCost + coachCost;
-
-    
+    totalExpenses.innerText = playerExpenses + managerCost + coachCost; 
 })
+// Budget part end
 

@@ -13,7 +13,7 @@
 }
 
 .player-list {
-    height: 350px;
+    height: 450px;
 }
 .budget-list{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -25,4 +25,8 @@
 
 .input-filed{
     width: 100px;
+}
+
+.table{
+    width: 5rem;
 }
