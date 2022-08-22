@@ -35,3 +35,9 @@
 .table{
     width: 5rem;
 }
+
+footer{
+    background-color: black;
+    height: 150px;
+    padding-top: 60px;
+}

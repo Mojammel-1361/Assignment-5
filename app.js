@@ -29,13 +29,11 @@ function playerName(element){
     
     const numberString = document.getElementById('total-plyer').innerText;
     const number = parseInt(numberString);
-    if(number > 3){
+    if(number >= 5 ){
         alert('5 palyer is select beter luck next time');
         
     }
-    else{
-        
-    }
+    
     
     
 
