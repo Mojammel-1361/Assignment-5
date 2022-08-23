@@ -24,7 +24,7 @@ function playerName(element){
         playerName: playerName
     }
     if (nameArry.length >= 5) {
-        alert('top 5 player li');
+        alert('top 5 player is selected better luck next time');
         return;
     } 
     else{
@@ -34,17 +34,18 @@ function playerName(element){
     element.disabled = true;
     }
 }
+// object select part end
 
 // player calculated part start 
 document.getElementById('calculated').addEventListener('click', function(){
     const playerCostInput = document.getElementById('player-cost');
     const playerCost = playerCostInput.value;
     
-    const totelPlayer = document.getElementById('total-plyer').innerText;
+    const totalPlayer = document.getElementById('total-plyer').innerText;
 
     const playerExpenses =document.getElementById('player-expenses');
     
-    const cost = playerCost * totelPlayer;
+    const cost = playerCost * totalPlayer;
     
     playerExpenses.innerText = cost;
 })
