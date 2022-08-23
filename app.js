@@ -11,11 +11,11 @@ function displayList (list){
         <td>${name}</td>
         `;
         tableBody.appendChild(tr);
-        
     }
 }
+// player list create and display part  start
 
-
+// object select part start
 function playerName(element){
     
     const playerName =element.parentNode.parentNode.children[0].innerText;
@@ -23,20 +23,18 @@ function playerName(element){
     const playerObject ={
         playerName: playerName
     }
-    nameArry.push(playerObject);
+    if (nameArry.length >= 5) {
+        alert('top 5 player li');
+        return;
+    } 
+    else{
+        nameArry.push(playerObject);
     document.getElementById('total-plyer').innerHTML = nameArry.length;
     displayList(nameArry);
-    
-    const numberString = document.getElementById('total-plyer').innerText;
-    const number = parseInt(numberString);
-    if (number > 5) {
-        alert('top 5 player select');
-        return number;
-    }
     element.disabled = true;
+    }
 }
-// player list create and display part  end
-    
+
 // player calculated part start 
 document.getElementById('calculated').addEventListener('click', function(){
     const playerCostInput = document.getElementById('player-cost');
